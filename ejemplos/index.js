@@ -70,9 +70,9 @@ console.log("---CICLOS---");
     
 // }
 
-// while (condition) {
+while (condition) {
    
-// }
+}
 
 for (const item of [1,2,3]) {
     console.log(item);
@@ -115,3 +115,35 @@ const crearNombreCompleto = (nombre, apellido) => {
 const botonesHTML = document.getElementsByTagName('button')
 console.log(botonesHTML);
 crearNombreCompleto(nombre,apellido)
+
+//ARRAY
+let estudiantes = []
+
+//AGREGAR ELEMENTO
+// estudiantes.push(()=>{console.log();})
+estudiantes.push(5)
+estudiantes.push(null)
+estudiantes.push("asd")
+estudiantes.push({'nombre':'juan', id:123})
+estudiantes.push({'nombre':'maria', id:456})
+estudiantes.push({'nombre':'maria', id:465})
+
+const imprimirEstudiante = (estudiante) => {
+    console.log(estudiante.nombre);
+}
+
+estudiantes.forEach(imprimirEstudiante)
+estudiantes.forEach((x)=> console.log(x.nombre));
+
+for (let i = 0; i < estudiantes.length; index++) {
+    if (estudiantes[i] == 'maria'){
+        console.log(estudiantes[i].id);
+    }
+    
+}
+
+const marias = estudiantes.filter(x => x.nombre == 'maria');
+const maria = estudiantes.find(x => x.nombre == 'maria');
+estudiantes = estudiantes.map(x=> {return {...x, edad:null}})
+
+console.log(estudiantes);
