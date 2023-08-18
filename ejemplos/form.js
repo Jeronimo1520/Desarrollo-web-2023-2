@@ -5,6 +5,7 @@ const getDataForm = () => {
     const acceptCondition = document.getElementById("acceptConditions").checked;
     const typeA = document.getElementById("typeA").checked;
     const typeB = document.getElementById("typeB").checked;
+    const period = document.getElementById("semester").value;
 
     //JSON {clave:valor}
     const data = {

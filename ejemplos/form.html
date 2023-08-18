@@ -51,28 +51,32 @@
             </center>
             <form action="javascript:void(0)" onsubmit="getDataForm()">
                 <label for="txtName">Nombre</label>
-                <input id="txtName" name="txtName" type="text" placeholder="Ingrese su nombre">
+                <input required class="form-control" id="txtName" name="txtName" type="text" placeholder="Ingrese su nombre">
                 <br>
-                <label for="txtEmail">Email</label>
+                <label class="form-control" for="txtEmail">Email</label>
                 <input id="txtEmail" name="txtEmail" type="email" placeholder="Ingrese su email">
                 <br>
-                <label for="txtTask">Descripción tarea</label>
+                <label class="form-control" for="txtTask">Descripción tarea</label>
                 <br>
-                <textarea name="txtTask" id="txtTask" cols="10" rows="3"></textarea>
+                <textarea class="form-control" name="txtTask" id="txtTask" cols="10" rows="3"></textarea>
                 <br>
-                <input type="checkbox" name="acceptConditions" id="acceptConditions">
+                <input class="form-check-input" type="checkbox" name="acceptConditions" id="acceptConditions">
                 <label for="txtConditions">
                   <a href="https://google.com" target="_blank">Acepta términos y condiciones</a>
                 </label>
                 <br>
                 <label for="taskType">Tipo de tarea</label>
                 <br>
-                <input type="radio" name="taskType" id="typeA"> Actividad
+                <input class="form-check-input" type="radio" name="taskType" id="typeA"> Actividad
                 <br>
-                <input type="radio" name="taskType" id="typeB"> Tarea
+                <input class="form-check-input" type="radio" name="taskType" id="typeB"> Tarea
                 <br>
                 <br>
-                <input type="submit" value="Enviar">
+                <select class="form-control" name="semester" id="">
+                  <option value="Semestre1">Semestre 1</option>
+                </select>
+                <br>
+                <input class="btn btn-primary" type="submit" value="Enviar">
             </form>
         </div>
       </main>
