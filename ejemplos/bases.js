@@ -1,52 +1,47 @@
-//Ejemplos de javascript
-
-//Comentario de linea
-
+// Ejemplos de javascript
+// Comentario de linea
 /**
  * Comentario de bloque
  */
-
-console.log("Hola mundo");
-console.log("----------");
-
+console.log("Hola Mundo")
+console.log("-------");
+let nombre = "Juan"
+let apellido = "Pardo"
 const edad = 55;
-let nombre = "Juan";
-let apellido = "Pardo";
-const esEstudiante = false;
-const altura = 1.70;
-const semestres = [] //Array
-//Diccionarios -> Objeto -> JSON (Javascript Object Notation)
-const materiaPreferida = {nombre:"Calculo",id:0}
-
-//Null-undefined
+const esEstudiante = false
+const altura = 1.70
+//List -> Array
+const semestres = []
+// Diccionarios -> Objecto -> JSON (Javascript Object Notation)  
+const materiaPreferida = { nombre: "Calculo", id: 0 }
+// null - undefined
 const universidad = null
 const carrera = undefined;
 
-console.log("Tipo de dato de nombre: " + typeof(nombre));
-console.log("Tipo de dato de edad: " + typeof(edad));
+console.log("Tipo de dato de nombre:" + typeof nombre);
+console.log("Tipo de dato de edad:" + typeof edad);
 
-console.log("----Conversion de string a number");
+console.log("---- Conversión de string a number ---");
 const precioMatricula = "5000000.5"
 console.log("Entero " + parseInt(precioMatricula));
-console.log("Flotante "+ parseFloat(precioMatricula));
+console.log("Flotante " + parseFloat(precioMatricula));
 
-console.log("----- == & ===----");
-console.log("Doble igual: " , "45" == 45); //TRUE //COMPARA VALOR
-console.log("Triple igual: " , "45" === 45); //FALSE // COMPARA VALOR Y TIPO
+console.log("---- == & === ---");
+console.log("Doble igual: ", "45" == 45); //  TRUE  // VALOR
+console.log("Triple igual: ", "45" === 45); //  FALSE // VALOR Y TIPO
 
-console.log("----CONCATENACION----");
+console.log("---- concatenacion ---");
 console.log(nombre + " " + apellido);
 console.log(`${nombre} ${apellido}`);
 
-console.log("----OPERADOR TERNARIO---- (exp ? verdadero : false");
-console.log(edad >= 18 ? "Es mayor de edad ": "Es menor de edad");
+console.log("---- operador ternario  ( exp ? verdadero : falso ) ---");
+console.log(edad >= 18 ? "Es mayor de edad" : "Es menor de edad");
+let condition = edad > 18
+if (condition) { }
+if (condition) { } else { }
 
-console.log("---CONDICIONALES---");
-let condition = edad >18
-if (condition) {}
-if (condition) {} else {}
-
-const dia = "LUNES"
+console.log("--- condicionales --- ");
+const dia = "LUNESJASD"
 switch (dia) {
     case "LUNES":
         console.log("LUNES");
@@ -54,96 +49,116 @@ switch (dia) {
     case "MARTES":
         console.log("MARTES");
         break;
-    case "MARTES":
-        console.log(dia);
-        break;
-    
     default:
-        console.log("No es valido");
+        console.log("NO ES VALIDO");
         break;
 }
 
-
-console.log("---CICLOS---");
-// for (let index = 0; index < 10; index++) {
-//     const element = array[index];
-    
+console.log("--- CICLOS --- ");
+for (let index = 0; index < 10; index++) { }
+// while (condition) {
 // }
-
-while (condition) {
-   
-}
-
-for (const item of [1,2,3]) {
+console.log("--- for of --- ");
+for (const item of [1, 2, 3]) {
     console.log(item);
 }
-
+console.log("--- for in --- ");
 for (const key in materiaPreferida) {
- console.log(key);
+    console.log(key);
 }
-
-[1,2,3].forEach(element => {
+console.log("--- forEach --- ");
+[1, 2, 3].forEach(element => {
     console.log(element);
 });
 
-console.log("---FUNCIONES---");
-
+console.log('-- FUNCIONES --');
+// Funcion clásica de js
 function imprimirNombre(nombre) {
     console.log(nombre);
 }
-
-imprimirNombre(nombre);
+// Llamar la funcion imprimirNombre
+imprimirNombre(nombre)
 
 const imprimirNombreApellido = (nombre, apellido) => {
-    console.log(`${nombre} ${apellido}`); // Arrow function
-}
-
-imprimirNombreApellido(nombre,apellido);
-
-//Scope
-const crearNombreCompleto = (nombre, apellido) => {
-    console.log("--GLOBAL SCOPE FAKE---");
     console.log(`${nombre} ${apellido}`);
+}
+// Llamar imprimirNombreApellido
+imprimirNombreApellido(nombre, apellido)
+
+
+const crearNombreCompleto = (nombre, apellido) => {
+    console.log("-- GLOBAL SCOPE FAKE -- ");
+    console.log(nombre, apellido);
     let name = nombre
     if (nombre.length > 3) {
         let name = nombre[0] + " " + apellido
-        console.log(name);
+        console.log("94 " + name);
     }
-    console.log(name);
+    console.log("92 " + name);
+
+
 }
 
-const botonesHTML = document.getElementsByTagName('button')
-console.log(botonesHTML);
-crearNombreCompleto(nombre,apellido)
+// const botonesHtm = document.getElementsByTagName('button')
+// console.log(botonesHtm);
+crearNombreCompleto(nombre, apellido)
 
-//ARRAY
+
+// ARRAY 
 let estudiantes = []
 
-//AGREGAR ELEMENTO
-// estudiantes.push(()=>{console.log();})
-estudiantes.push(5)
-estudiantes.push(null)
-estudiantes.push("asd")
-estudiantes.push({'nombre':'juan', id:123})
-estudiantes.push({'nombre':'maria', id:456})
-estudiantes.push({'nombre':'maria', id:465})
+// Agregar un elemento
+// estudiantes.push(5)
+// estudiantes.push(null)
+// estudiantes.push({})
+// estudiantes.push(()=>{ console.log(); })
+estudiantes.push({ "nombre": "Juan", id: 123 })
+estudiantes.push({ "nombre": "Maria", id: 1234 })
+estudiantes.push({ "nombre": "Maria", id: 12344 })
 
-const imprimirEstudiante = (estudiante) => {
-    console.log(estudiante.nombre);
-}
 
-estudiantes.forEach(imprimirEstudiante)
-estudiantes.forEach((x)=> console.log(x.nombre));
+estudiantes.forEach((x) => console.log(x.nombre))
 
-for (let i = 0; i < estudiantes.length; index++) {
-    if (estudiantes[i] == 'maria'){
+for (let i = 0; i < estudiantes.length; i++) {
+    if (estudiantes[i].nombre == "Maria") {
         console.log(estudiantes[i].id);
     }
-    
 }
-
-const marias = estudiantes.filter(x => x.nombre == 'maria');
-const maria = estudiantes.find(x => x.nombre == 'maria');
-estudiantes = estudiantes.map(x=> {return {...x, edad:null}})
-
+const maria = estudiantes.find(x => x.nombre == "Maria")
 console.log(estudiantes);
+
+
+const marias = estudiantes.filter(x => x.nombre == "Maria")
+marias[0].id
+
+estudiantes = estudiantes.map(x => { return { ...x, edad: null } })
+console.log(estudiantes);
+
+///  JSON (javascript object notation)
+
+jsonsEnJavascript();
+
+
+
+
+function jsonsEnJavascript() {
+    console.log('--- MANEJO DE JSON --');
+    const ciudad = {
+        nombre: "Medellin",
+        "token-ciudad":"sdfsdfsdf",
+        poblacion: 2.5,
+        barrios_count: 31,
+        calcularCantidadVehiculos(){
+            console.log("Total de vehiculos", "55M", this.nombre);
+        }
+    };
+    // DESTRUCTURACION
+    const { nombre:nombreCiudad } = ciudad;
+    console.log(nombreCiudad);
+
+    //  funciones dentro de un json
+    ciudad.calcularCantidadVehiculos()
+    console.log(ciudad.nombre);
+    console.log(ciudad["nombre"]);
+    console.log(ciudad["token-ciudad"]);
+}
