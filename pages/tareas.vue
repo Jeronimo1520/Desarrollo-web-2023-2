@@ -32,9 +32,12 @@
     </div>
   </template>
   <script setup>
+  import axios from "axios";
   const user = ref({ conditions: true, period: '1' })
-  const saveUser = () => {
+  const saveUser = async() => {
     console.log(user.value);
+    const result = await axios.post("http://localhost:3001/task",user.value)
+    console.log(result);
   }
   const updatePeriod = () => {
     console.log(user.value);
