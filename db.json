@@ -17,6 +17,15 @@
       "description": "adasdad",
       "type": "typeA",
       "id": 2
+    },
+    {
+      "conditions": true,
+      "period": "1",
+      "name": "asdasdas",
+      "email": "asdasdasd@asdsa",
+      "description": "asdasd",
+      "type": "typeA",
+      "id": 3
     }
   ],
   "users": []
